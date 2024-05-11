@@ -1,0 +1,14 @@
+<div class="dashboardContainer">
+    <div class="togglerContainer">
+        <div class="toggleElements" (click)="tabToggler(1)" [ngClass]="selectedTab ? 'currentTab' : ''">
+            All Songs
+        </div>
+        <div class="toggleElements" (click)="tabToggler(0)" [ngClass]="!selectedTab  ? 'currentTab' : ''">
+            Playslist
+        </div>
+    </div>
+    <div class="dashboardBody">
+        <app-allsongs *ngIf="selectedTab"></app-allsongs>
+        <app-playlist *ngIf="!selectedTab"></app-playlist>
+    </div>
+</div>

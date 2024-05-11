@@ -1,0 +1,28 @@
+.dashboardContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+.togglerContainer{
+    width: 70%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toggleElements{
+    width: 50%;
+    text-align: center;
+    padding: 15px 10px;
+    background-color: aqua;
+    cursor: pointer;
+}
+.currentTab{
+    transform: scale(1.1);
+    box-shadow: 1px 1px 1px black;
+    z-index: 10;
+}
+.dashboardBody{
+    flex: 1;
+}

@@ -1,0 +1,72 @@
+.PlayslistContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.myPlayList{
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70vw;
+    margin: 20px 0;
+    height: 4rem;
+}
+.createPlaylist{
+    padding: 15px 10px;
+    border: 1px solid  black;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 10rem;
+    text-align: center;
+}
+.allSongsSearchBar{
+    width: 80%;
+}
+.allSongsSearchBar input{
+    width: 60%;
+    padding: 20px 10px;
+    border-radius: 12px;  
+}
+.allSongsBody{
+    flex: 1;
+}
+.allSongsElements{
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70vw;
+    margin: 20px 0;
+}
+.elementsLeft{
+    width: 75%;
+}
+.elementsRight{
+    flex: 1;
+    display: flex;
+}
+.songElement{
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+.songElement label{
+    font-weight: 600;
+    margin-right: 1rem;
+    min-width: 5rem
+}
+.songElement span{
+    padding-left: 5px;
+}
+.backBtn{
+    font-weight: 800;
+    margin: 1rem 0;
+    cursor: pointer;
+}

@@ -1,0 +1,46 @@
+<div class="PlayslistContainer">
+    <div *ngIf="!addPlayList" style="display: flex;align-items: center;flex-direction: column;">
+        <div class="myPlayList" (click)="openPlayList(playlist,i)" *ngFor="let playlist of myPlayList; let i = index" >
+            <label> PlayList {{ i+1}}</label>
+            <span>test</span>
+        </div>
+        <div class="createPlaylist" (click)="createPlayList()">
+            Create PlayList
+        </div>
+    </div>
+    <div *ngIf="addPlayList" >
+        <div class="backBtn" (click)="createPlayList()"> 
+            Back
+        </div>
+        <div class="allSongsSearchBar">
+            <input type="text" placeholder="Search for Songs...." (keyup)="searchSongName()" [(ngModel)]="songSearch"/>
+        </div>
+        <div class="allSongsBody">
+            <div class="allSongsElements" *ngFor="let song of allSongs">
+                <div class="elementsLeft">
+                    <div class="songElement">
+                        <label>Song Title </label>:
+                        <span> {{song.title}}</span>
+                    </div>
+                    <div class="songElement">
+                        <label>Singers </label>:
+                        <span>{{allUsers[allAlbums[song.albumId]?.userId].name}}</span>
+                    </div>
+                    <div class="songElement">
+                        <label>Album </label>:
+                        <span>{{allAlbums[song.albumId]?.title}}</span>
+                    </div>
+                </div>
+                <div class="elementsRight">
+                    <div class="songElement">
+                        <label>Play Time</label>:
+                        <span></span>
+                    </div>
+                    <div class="songElement" style="cursor: pointer;" (click)="addToPlayList(song)">
+                        <label>Add to List</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

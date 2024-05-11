@@ -1,0 +1,29 @@
+<div class="allSongsContainer">
+    <div class="allSongsSearchBar">
+        <input type="text" placeholder="Search for Songs...." (keyup)="searchSongName()" [(ngModel)]="songSearch"/>
+    </div>
+    <div class="allSongsBody">
+        <div class="allSongsElements" *ngFor="let song of allSongs">
+            <div class="elementsLeft">
+                <div class="songElement">
+                    <label>Song Title </label>:
+                    <span> {{song.title}}</span>
+                </div>
+                <div class="songElement">
+                    <label>Singers </label>:
+                    <span>{{allUsers[allAlbums[song.albumId]?.userId].name}}</span>
+                </div>
+                <div class="songElement">
+                    <label>Album </label>:
+                    <span>{{allAlbums[song.albumId]?.title}}</span>
+                </div>
+            </div>
+            <div class="elementsRight">
+                <div class="songElement">
+                    <label>Play Time</label>:
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
